@@ -1,5 +1,5 @@
-from brownie import sampleToken, accounts
+from brownie import depositor, accounts
 
 def main():
     acc = accounts.load('deployment_account')
-    sampleToken.deploy("My ERC20 Token", "MET", 18, 1e28, {'from': acc})
+    depositor.deploy({'from': acc})
